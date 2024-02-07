@@ -1,6 +1,42 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 1rem;
+
+  list-style: none;
+
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+
+  /*font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Young Serif", serif;*/
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+label {
+  text-align: left;
+}
+
+input {
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+}
+
+/*Contact*/
+.wrapperForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
