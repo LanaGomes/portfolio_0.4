@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 
-import { getFirestore, collection, getDocs,addDoc} from "firebase/firestore";
+import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import { useState } from "react";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBB2jMxanwQOmXjEwAXiN5emPOqVl9bLDc",
@@ -25,31 +26,41 @@ const colRef = collection(db, "Messages");
 getDocs(colRef).then((snapshot) => {});
 
 function Contact() {
-  function handleSubmit(e) {
-    e.preventDefault();
-    addDoc(colRef,{Name:, Email:, Message:})
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
+  function handleOnChange(e) {
+    const inputValue = e.target.value;
+    if (name) {setName(inputValue)}
+    else
   }
 
-//Create a state variable to store the input field's value.
-//Set an onChange event handler on the input field.
-//In the event handler, assign event.target.value to the state variable.
-//The state variable will contains the input field's value at any given time.
+  function handleSubmit(e) {
+    e.preventDefault();
 
+    setName() // watch 
+  }
+
+  //Create a state variable to store the input field's value.
+  //Set an onChange event handler on the input field.
+  //In the event handler, assign event.target.value to the state variable.
+  //The state variable will contains the input field's value at any given time.
 
   return (
     <div>
       <form onSubmit={handleSubmit} className="wrapperForm add">
         <label>
           Name
-          <input name="Name" type="text"></input>
+          <input onChange={handleOnChange} name="Name" type="text"></input>
         </label>
         <label>
           E-mail
-          <input name="Email" type="text"></input>
+          <input onChange={handleOnChange} name="Email" type="text"></input>
         </label>
         <label>
           Mensagem
-          <input name="Mensagem" type="text"></input>
+          <input onChange={handleOnChange} name="Mensagem" type="text"></input>
         </label>
         <button>Enviar</button>
       </form>
