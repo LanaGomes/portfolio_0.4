@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-
 import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
 import { useState } from "react";
 
@@ -46,6 +45,7 @@ function Contact() {
     //console.log(event.target.value);
     //console.log(event.target.name);
     setUser({ ...user, [event.target.name]: event.target.value });
+    validateEmail(event);
   }
 
   function handleSubmit(e) {
@@ -66,6 +66,8 @@ function Contact() {
             name="name"
             type="text"
             required
+            minLength="3"
+            maxLength="80"
           ></input>
         </label>
         <label>
