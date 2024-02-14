@@ -23,44 +23,70 @@ const db = getFirestore();
 const colRef = collection(db, "Messages");
 
 //get the collection data
-getDocs(colRef).then((snapshot) => {});
+getDocs(colRef)
+  .then((snapshot) => {
+    let messages = [];
+    snapshot.docs.forEach((doc) => {
+      messages.push({ ...doc.data(), id: doc.id });
+    });
+  })
+
+  .catch((err) => {
+    console.log(err.message);
+  });
 
 function Contact() {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  function handleOnChange(e) {
-    const inputValue = e.target.value;
-    if (name) {setName(inputValue)}
-    else
+  function handleOnChange(event) {
+    //console.log(event.target.value);
+    //console.log(event.target.name);
+    setUser({ ...user, [event.target.name]: event.target.value });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    setName() // watch 
+    addDoc(colRef, user).then(() => {
+      setUser({ name: "", email: "", message: "" });
+    });
   }
-
-  //Create a state variable to store the input field's value.
-  //Set an onChange event handler on the input field.
-  //In the event handler, assign event.target.value to the state variable.
-  //The state variable will contains the input field's value at any given time.
 
   return (
     <div>
       <form onSubmit={handleSubmit} className="wrapperForm add">
         <label>
           Name
-          <input onChange={handleOnChange} name="Name" type="text"></input>
+          <input
+            value={user.name}
+            onChange={handleOnChange}
+            name="name"
+            type="text"
+            required
+          ></input>
         </label>
         <label>
           E-mail
-          <input onChange={handleOnChange} name="Email" type="text"></input>
+          <input
+            value={user.email}
+            onChange={handleOnChange}
+            name="email"
+            type="text"
+            required
+          ></input>
         </label>
         <label>
           Mensagem
-          <input onChange={handleOnChange} name="Mensagem" type="text"></input>
+          <input
+            value={user.message}
+            onChange={handleOnChange}
+            name="message"
+            type="text"
+            required
+          ></input>
         </label>
         <button>Enviar</button>
       </form>
