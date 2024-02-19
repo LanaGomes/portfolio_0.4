@@ -1,7 +1,10 @@
-#root {
+:root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem;
+
+  height: 100vh;
+  background-image: linear-gradient(var(--darkBlue), var(--brightBlue));
 
   list-style: none;
 
@@ -12,6 +15,12 @@
   font-family: "Quicksand", sans-serif;
   font-family: "Roboto Mono", monospace;
   font-family: "Young Serif", serif;*/
+
+  /*colors*/
+  --darkBlue: #1d2440;
+  --lighterBlue: #484e63;
+  --brightBlue: #374787;
+  --white: #ffffff;
 }
 
 *,
@@ -22,6 +31,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+/*-----------------------------------*/
 
 label {
   text-align: left;
