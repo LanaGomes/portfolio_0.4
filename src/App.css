@@ -21,6 +21,7 @@
   --lighterBlue: #484e63;
   --brightBlue: #374787;
   --white: #ffffff;
+  --containerBackground: #d9d9d9;
 }
 
 *,
@@ -32,7 +33,17 @@
   scroll-behavior: smooth;
 }
 
-/*-----------------------------------*/
+/*General*/
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.transparentContainer {
+  background-color: var(--containerBackground);
+}
 
 label {
   text-align: left;
@@ -44,6 +55,8 @@ input {
   display: block;
   width: 100%;
 }
+
+/*-----------------------------------*/
 
 /*Contact*/
 .wrapperForm {

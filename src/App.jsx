@@ -4,7 +4,13 @@ import Contact from "./Components/Contact";
 import "./App.css";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <main className="mainContainer">
+        <section className="transparentContainer"></section>
+      </main>
+    </>
+  );
 }
 
 export default App;
