@@ -1,9 +1,9 @@
 function Navbar() {
   return (
-    <nav>
-      <a>About</a>
-      <a>Projects</a>
-      <a>Contact</a>
+    <nav className="wrapperNavBar">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   );
 }
