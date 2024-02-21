@@ -155,11 +155,15 @@ input {
   padding: 1rem;
 }
 
+.container p {
+  font-family: "Roboto Mono", monospace;
+  color: var(--lighterBlue);
+}
+
 .cardProject {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 90%;
-
+  margin: 0 0.2rem 0 0.2rem;
   color: var(--darkBlue);
 
   border-radius: 1rem;
@@ -173,6 +177,7 @@ input {
 .cardProject img {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+  filter: saturate(50%);
 }
 
 .projectIcons {
