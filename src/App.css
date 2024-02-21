@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
 
-  height: 100vh;
+  height: 100dvh;
   background-image: linear-gradient(
     var(--darkBlue),
     var(--darkBlue),
@@ -136,6 +136,57 @@ input {
   text-align: center;
   margin-top: 0.5rem;
   color: var(--white);
+}
+
+/*Projects*/
+
+.wrapperProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapperProjects h1 {
+  margin-bottom: 0.8rem;
+  color: var(--white);
+}
+
+.container {
+  padding: 1rem;
+}
+
+.cardProject {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 90%;
+
+  color: var(--darkBlue);
+
+  border-radius: 1rem;
+  background-color: #e7e7e7be;
+}
+
+.cardProject:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardProject img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.projectIcons {
+  padding: 0 0 0.8rem 1rem;
+}
+
+.projectIcons img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.container h4,
+p {
+  margin-top: 0.3rem;
 }
 
 /*Contact*/
