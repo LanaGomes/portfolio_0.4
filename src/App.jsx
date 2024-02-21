@@ -17,6 +17,12 @@ function App() {
           <Projects />
         </section>
         <section className="transparentContainer">
+          <Projects />
+        </section>
+        <section className="transparentContainer">
+          <Projects />
+        </section>
+        <section className="transparentContainer">
           <Contact />
         </section>
       </main>

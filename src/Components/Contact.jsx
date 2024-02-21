@@ -56,7 +56,8 @@ function Contact() {
   }
 
   return (
-    <div>
+    <div className="wrapperContact">
+      <h1>Contact</h1>
       <form onSubmit={handleSubmit} className="wrapperForm add">
         <label>
           Name
@@ -68,6 +69,7 @@ function Contact() {
             required
             minLength="3"
             maxLength="80"
+            placeholder="Insira seu nome aqui"
           ></input>
         </label>
         <label>
@@ -78,6 +80,7 @@ function Contact() {
             name="email"
             type="text"
             required
+            placeholder="Insira seu nome aqui"
           ></input>
         </label>
         <label>
@@ -86,7 +89,9 @@ function Contact() {
             value={user.message}
             onChange={handleOnChange}
             name="message"
+            id="message"
             type="text"
+            placeholder="Insira sua mensagem aqui"
             required
           ></input>
         </label>

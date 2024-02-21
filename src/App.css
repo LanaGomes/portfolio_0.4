@@ -8,6 +8,9 @@
     var(--darkBlue),
     var(--brightBlue)
   );
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 
   list-style: none;
 
@@ -42,6 +45,8 @@ body,
 
 h1 {
   font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--white);
 }
 
 h2 {
@@ -64,13 +69,24 @@ a {
 
 label {
   text-align: left;
+  width: 100%;
+}
+
+button {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  border-style: none;
 }
 
 input {
-  padding: 0.4rem;
+  padding: 0.6rem;
   margin-bottom: 1rem;
   display: block;
   width: 100%;
+
+  border-radius: 1rem;
+  border-style: none;
 }
 
 .mainContainer {
@@ -111,6 +127,10 @@ input {
   border-radius: 5rem;
 }
 
+.wrapperAbout h1 {
+  margin-bottom: 0;
+}
+
 .wrapperAbout h2 {
   font-family: "Roboto Mono", monospace;
   font-weight: 100;
@@ -140,15 +160,17 @@ input {
 
 /*Projects*/
 
-.wrapperProjects {
+.wrapperProjects,
+.wrapperContact {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  text-align: center;
 }
 
-.wrapperProjects h1 {
-  margin-bottom: 0.8rem;
-  color: var(--white);
+.container h3 {
+  font-size: 1.2rem;
 }
 
 .container {
@@ -198,5 +220,15 @@ p {
 .wrapperForm {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+
+  color: var(--darkBlue);
+}
+
+.wrapperForm button {
+  margin-top: 0.5rem;
+}
+
+#message {
+  padding: 2rem;
 }
