@@ -10,19 +10,19 @@ function App() {
     <>
       <Navbar />
       <main className="mainContainer">
-        <section className="transparentContainer">
-          <About />
-        </section>
-        <section className="transparentContainer">
+        <div className="containerView700">
+          <section className="transparentContainer">
+            <About />
+          </section>
+          <section className="transparentContainer contactView700Contact">
+            <Contact />
+          </section>
+        </div>
+
+        <section className="transparentContainer containerView700Projects">
           <Projects />
         </section>
-        <section className="transparentContainer">
-          <Projects />
-        </section>
-        <section className="transparentContainer">
-          <Projects />
-        </section>
-        <section className="transparentContainer">
+        <section className="transparentContainer contactView600Contact">
           <Contact />
         </section>
       </main>

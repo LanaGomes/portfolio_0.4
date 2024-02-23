@@ -1,5 +1,3 @@
-//import { projects } from "../Database";
-import cat from "../images/cat.jpg";
 import githubIcon from "../images/githubIcon.png";
 import externalLinkIcon from "../images/externalLinkIcon.png";
 import { projects } from "../Database";
@@ -7,24 +5,28 @@ import { projects } from "../Database";
 function Projects() {
   return (
     <>
+      <h1 id="h1Projects">Projetos</h1>
       <div className="wrapperProjects">
-        <h1>Projetos</h1>
-        <section className="cardProject">
-          <img src={cat} />
-          <div className="container">
-            <h3>Resumo do título do projeto</h3>
-            <h4>Tecnologias utilizadas</h4>
-            <p>VS Code |Sublime |Text | Atom iTerm2 | Hyper</p>
-          </div>
-          <div className="projectIcons">
-            <a>
-              <img src={githubIcon}></img>
-            </a>
-            <a>
-              <img src={externalLinkIcon}></img>
-            </a>
-          </div>
-        </section>
+        {projects.map((project) => {
+          return (
+            <section className="cardProject">
+              <img src={project.projectImg} />
+              <div className="container">
+                <h3>{project.projectName}</h3>
+                <h4>Tecnologias utilizadas</h4>
+                <p>{project.technologiesUsed}</p>
+              </div>
+              <div className="projectIcons">
+                <a>
+                  <img src={githubIcon}></img>
+                </a>
+                <a>
+                  <img src={externalLinkIcon}></img>
+                </a>
+              </div>
+            </section>
+          );
+        })}
       </div>
     </>
   );
