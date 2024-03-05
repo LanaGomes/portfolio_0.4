@@ -7,13 +7,12 @@ import linkedinIcon from "../images/linkedinIcon.png";
 function About() {
   return (
     <div className="wrapperAbout">
-      <section className="wrapperImgTitleAbout">
-        <img id="profilePic" src={profilePic} />
-        <div className="wrapperTextsAbout">
-          <h1>Lana Gomes</h1>
-          <h2>Desenvolvimento Web</h2>
-        </div>
-      </section>
+      <img id="profilePic" src={profilePic} />
+      <div className="wrapperTextsAbout">
+        <h1>Lana Gomes</h1>
+        <h2>Desenvolvimento Web</h2>
+      </div>
+
       <div className="IconsAbout">
         <a>
           <img src={instaIcon}></img>
