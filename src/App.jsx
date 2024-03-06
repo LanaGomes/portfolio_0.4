@@ -10,13 +10,16 @@ function App() {
     <>
       <Navbar />
       <main className="mainContainer">
-        <section className="transparentContainer1 ">
-          <About />
-        </section>
+        <div className="containerAboutContact">
+          {" "}
+          <section className="transparentContainer1 ">
+            <About />
+          </section>
+          <section className="transparentContainer2  contactView700Contact">
+            <Contact />
+          </section>
+        </div>
 
-        <section className="transparentContainer2  contactView700Contact">
-          <Contact />
-        </section>
         <section className="transparentContainer3">
           <Projects />
         </section>
