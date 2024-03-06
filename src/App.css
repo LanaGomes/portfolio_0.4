@@ -6,7 +6,8 @@
   background-image: linear-gradient(
     var(--darkBlue),
     var(--darkBlue),
-    var(--brightBlue)
+    var(--brightBlue),
+    var(--brighgreen)
   );
   background-size: cover;
   background-position: center center;
@@ -25,7 +26,8 @@
   /*colors*/
   --darkBlue: #1d2440;
   --lighterBlue: #484e63;
-  --brightBlue: #374787;
+  --brightBlue: #3c359b;
+  --brighgreen: #35949b;
   --white: #ffffff;
   --containerBackground: #d9d9d963;
 }
@@ -69,7 +71,7 @@ a {
 .transparentContainer1 {
   background-color: var(--containerBackground);
 
-  margin: 1.25rem;
+  margin-bottom: 1rem;
   padding: 1rem;
 
   border-radius: 1rem;
@@ -77,9 +79,9 @@ a {
 
 .transparentContainer2 {
   background-color: var(--containerBackground);
-
+  width: 23rem;
   margin: 1.25rem;
-  padding: 1rem;
+  padding: 0.5rem;
 
   border-radius: 1rem;
 }
@@ -136,6 +138,7 @@ input {
   margin-left: 0.5rem;
   text-align: center;
   color: var(--white);
+  width: 20rem;
 }
 
 #profilePic {
@@ -237,7 +240,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 80%;
   color: var(--darkBlue);
 }
 
@@ -249,32 +252,51 @@ p {
   padding: 2rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 980px) {
   .contactView700Contact {
     display: none;
   }
 }
 
 @media only screen and (min-width: 601px) {
-  .contactView600Contact {
-    display: none;
+  .transparentContainer1 {
+    display: flex;
+    align-items: center;
   }
-
   .containerAboutContact {
     display: flex;
     height: 22rem;
   }
 
-  .transparentContainer1 {
-    display: flex;
-    align-items: center;
-  }
   #message {
     padding: 1rem;
   }
 }
 
 @media only screen and (min-width: 980px) {
+  .transparentContainer1 {
+    margin: 1.2rem 1rem 1.2rem 0;
+  }
+  .mainContainer {
+    margin-top: 5rem;
+  }
+  .containerAboutContact {
+    display: flex;
+
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  .contactView600Contact {
+    display: none;
+  }
+
+  /*container alternativo contact*/
+  .contactView700Contact {
+    margin: 1.2rem 0 1.2rem 0;
+    width: 50%;
+  }
+
   .wrapperNavBar {
     display: none;
   }
@@ -292,11 +314,22 @@ p {
     margin: 0 0.3rem 0 0.3rem;
   }
 
+  .transparentContainer1 {
+    background-color: var(--containerBackground);
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
   .transparentContainer3 {
     background-color: var(--containerBackground);
     padding-bottom: 1rem;
     border-radius: 1rem;
 
-    width: 60%;
+    width: 70%;
   }
 }
