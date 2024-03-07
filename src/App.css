@@ -250,6 +250,13 @@ p {
 
 #message {
   padding: 2rem;
+
+  margin-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+
+  border-radius: 1rem;
+  border-style: none;
 }
 
 @media only screen and (max-width: 980px) {

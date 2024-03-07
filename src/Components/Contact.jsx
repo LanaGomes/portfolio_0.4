@@ -85,7 +85,8 @@ function Contact() {
         </label>
         <label>
           Mensagem
-          <input
+          <textarea
+            maxLength={200}
             value={user.message}
             onChange={handleOnChange}
             name="message"
@@ -93,7 +94,7 @@ function Contact() {
             type="text"
             placeholder="Insira sua mensagem aqui"
             required
-          ></input>
+          ></textarea>
         </label>
         <button>Enviar</button>
       </form>
