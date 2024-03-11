@@ -23,7 +23,7 @@ function About() {
         <a>
           <img src={gitHubPic}></img>
         </a>
-        <a>
+        <a href="https://www.linkedin.com/in/lana-gomes-b622981ab/">
           <img src={externalLinkIcon}></img>
         </a>
       </div>

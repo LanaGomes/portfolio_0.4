@@ -1,5 +1,5 @@
-import githubIcon from "../images/githubIcon.png";
-import externalLinkIcon from "../images/externalLinkIcon.png";
+import githubIconBlue from "../images/githubLogoBlue.png";
+import curriculumLogo from "../images/curriculumLogoBlue.png";
 import { projects } from "../Database";
 
 function Projects() {
@@ -18,10 +18,10 @@ function Projects() {
               </div>
               <div className="projectIcons">
                 <a>
-                  <img src={githubIcon}></img>
+                  <img src={githubIconBlue}></img>
                 </a>
                 <a>
-                  <img src={externalLinkIcon}></img>
+                  <img src={curriculumLogo}></img>
                 </a>
               </div>
             </section>
