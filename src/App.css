@@ -192,12 +192,12 @@ input {
 }
 
 .container {
-  padding: 0.2rem;
+  padding: 0.5rem;
 }
 
 .container p {
   font-family: "Roboto Mono", monospace;
-  color: var(--lighterBlue);
+  color: var(--brighgreen);
 }
 
 .cardProject {
@@ -278,6 +278,9 @@ p {
 }
 
 @media only screen and (min-width: 980px) {
+  .container {
+    padding: 0.3rem;
+  }
   .transparentContainer1 {
     margin: 1.2rem 1rem 1.2rem 0;
   }
