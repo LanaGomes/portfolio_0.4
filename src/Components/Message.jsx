@@ -17,6 +17,11 @@ function Message({ type, msg }) {
       const timer = setTimeout(() => {
         setVisible(false);
       }, 3000);
+
+      return () =>
+        clearTimeout(
+          timer
+        ); /*precisa "limpar" o timeout* aqui ele esta condicionado ao timer(3segundos)*/
     },
     [
       msg,
