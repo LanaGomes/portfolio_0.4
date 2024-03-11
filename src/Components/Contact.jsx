@@ -58,7 +58,7 @@ function Contact() {
 
   return (
     <div className="wrapperContact">
-      <Message className={``} msg="alguma coisa" />
+      <Message type="error" msg="alguma coisa" />
       <h1>Contact</h1>
       <form onSubmit={handleSubmit} className="wrapperForm add">
         <label>
