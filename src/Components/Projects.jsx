@@ -1,5 +1,6 @@
 import githubIconBlue from "../images/githubLogoBlue.png";
 import curriculumLogo from "../images/curriculumLogoBlue.png";
+import pdfCurriculum from "../images/histoquimico_pdf.pdf";
 import { projects } from "../Database";
 
 function Projects() {
@@ -9,7 +10,7 @@ function Projects() {
       <div className="wrapperProjects">
         {projects.map((project) => {
           return (
-            <section className="cardProject">
+            <section key={project.id} className="cardProject">
               <img src={project.projectImg} />
               <div className="container">
                 <h3>{project.projectName}</h3>
@@ -17,10 +18,10 @@ function Projects() {
                 <p>{project.technologiesUsed}</p>
               </div>
               <div className="projectIcons">
-                <a>
+                <a target="blank" href="https://github.com/LanaGomes">
                   <img src={githubIconBlue}></img>
                 </a>
-                <a>
+                <a target="blank" href={pdfCurriculum}>
                   <img src={curriculumLogo}></img>
                 </a>
               </div>

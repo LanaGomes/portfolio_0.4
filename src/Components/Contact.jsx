@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
 import { useState } from "react";
+import Message from "./Message";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBB2jMxanwQOmXjEwAXiN5emPOqVl9bLDc",
@@ -57,6 +58,7 @@ function Contact() {
 
   return (
     <div className="wrapperContact">
+      <Message className={``} msg="alguma coisa" />
       <h1>Contact</h1>
       <form onSubmit={handleSubmit} className="wrapperForm add">
         <label>

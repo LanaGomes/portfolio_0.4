@@ -8,12 +8,14 @@ export const projects = [
     projectImg: cat,
     projectName: "Marka",
     technologiesUsed: "VS Code  Sublime Text   Atom  iTerm2   Hyper",
+    linkGithub: "https://github.com/LanaGomes",
   },
   {
     id: 2,
     projectImg: happy,
     projectName: "Marka2",
     technologiesUsed: "VS Code  Sublime Text   Atom  iTerm2   Hyper",
+    linkGithub: "https://github.com/LanaGomes",
   },
 
   {
@@ -21,5 +23,6 @@ export const projects = [
     projectImg: lyme,
     projectName: "Marka3",
     technologiesUsed: "VS Code  Sublime Text   Atom  iTerm2   Hyper",
+    linkGithub: "https://github.com/LanaGomes",
   },
 ];
