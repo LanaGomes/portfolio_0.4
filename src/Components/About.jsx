@@ -15,19 +15,32 @@ function About() {
       </div>
 
       <div className="IconsAbout">
-        <a target="blank" href="https://www.instagram.com/lanahermana/">
+        <a
+          className="tooltip"
+          target="blank"
+          href="https://www.instagram.com/lanahermana/"
+        >
+          <span class="tooltiptext">Instagram</span>
           <img src={instaIcon}></img>
         </a>
         <a
+          className="tooltip"
           target="blank"
           href="https://www.linkedin.com/in/lana-gomes-b622981ab/"
         >
+          <span class="tooltiptext">Linkedin</span>
           <img src={linkedinIcon}></img>
         </a>
-        <a target="blank" href="https://github.com/LanaGomes">
+        <a
+          className="tooltip"
+          target="blank"
+          href="https://github.com/LanaGomes"
+        >
+          <span class="tooltiptext">gitHub</span>
           <img src={gitHubPic}></img>
         </a>
-        <a target="blank" href={pdfCurriculum}>
+        <a className="tooltip" target="blank" href={pdfCurriculum}>
+          <span class="tooltiptext">Currículo</span>
           <img src={externalLinkIcon}></img>
         </a>
       </div>

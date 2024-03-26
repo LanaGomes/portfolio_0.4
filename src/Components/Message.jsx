@@ -11,7 +11,7 @@ function Message({ type, msg }) {
         return;
       }
 
-      setVisible(true);
+      //setVisible(true);
       /*Se a msg for true a mensagem será visivel , se ela for false, será invisivel*/
 
       const timer = setTimeout(() => {
