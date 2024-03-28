@@ -20,7 +20,7 @@ function About() {
           target="blank"
           href="https://www.instagram.com/lanahermana/"
         >
-          <span class="tooltiptext">Instagram</span>
+          <span className="tooltiptext">Instagram</span>
           <img src={instaIcon}></img>
         </a>
         <a

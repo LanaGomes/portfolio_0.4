@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
 import { useState } from "react";
+
 import Message from "./Message";
 
 const firebaseConfig = {
@@ -42,23 +43,43 @@ function Contact() {
     message: "",
   });
 
+  const [ShowSuccessMessage, setShowSuccessMessage] = useState(false);
+
   function handleOnChange(event) {
     //console.log(event.target.value);
     //console.log(event.target.name);
     setUser({ ...user, [event.target.name]: event.target.value });
-    validateEmail(event);
+    if (event.target.value <= 3) {
+      this.setState({
+        [event.target.name]: e.target.value,
+      });
+    }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    addDoc(colRef, user).then(() => {
-      setUser({ name: "", email: "", message: "" });
-    });
+
+    addDoc(colRef, user)
+      .then(() => {
+        setUser({ name: "", email: "", message: "" });
+        setShowSuccessMessage(true);
+        setTimeout(() => {
+          setShowSuccessMessage(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("Erro:", error);
+      });
   }
 
   return (
-    <div className="wrapperContact">
-      <Message type="error" msg="alguma coisa" />
+    <div id="contact" className="wrapperContact">
+      {ShowSuccessMessage && (
+        <Message
+          type="success"
+          msg="Mensagem enviada :)  Entrarei em contato em breve"
+        />
+      )}
       <h1>Contact</h1>
       <form onSubmit={handleSubmit} className="wrapperForm add">
         <label>
@@ -80,7 +101,9 @@ function Contact() {
             value={user.email}
             onChange={handleOnChange}
             name="email"
-            type="text"
+            type="email"
+            minLength="10"
+            maxLength="50"
             required
             placeholder="Insira seu nome aqui"
           ></input>
@@ -88,12 +111,13 @@ function Contact() {
         <label>
           Mensagem
           <textarea
-            maxLength={200}
             value={user.message}
             onChange={handleOnChange}
             name="message"
             id="message"
             type="text"
+            minLength={10}
+            maxLength={200}
             placeholder="Insira sua mensagem aqui"
             required
           ></textarea>
